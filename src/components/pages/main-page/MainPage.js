@@ -1,8 +1,11 @@
+import Header from "../../header/Header";
+import withAuth from "../../../hoc/withAuth"
+
 const MainPage = () => {
     return (
         <div>
-            MainPage
+            <Header/>
         </div>
     )
 }
-export default MainPage
+export default withAuth(MainPage);

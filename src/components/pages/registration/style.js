@@ -41,3 +41,13 @@ box-shadow: 10px 10px 55px 6px rgba(86,13,13,0.75);
 export const Title = styled.h3`
 text-align: center;
 `
+
+export const TitleLink = styled.p`
+text-align: right;
+fonst-size:  13px;
+text-decoration: none;
+
+& span{
+    margin-right: 5px;
+}
+`

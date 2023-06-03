@@ -11,8 +11,9 @@ import {
     Select,
 } from 'antd';
 import { Controller, useForm } from 'react-hook-form';
-import { FormWrapper, Title } from './style';
+import { FormWrapper, Title, TitleLink } from './style';
 import { FetchRegistration } from '../../../api';
+import Link from 'antd/es/typography/Link';
 
 const Registration = () => {
     const { control, handleSubmit } = useForm();
@@ -94,6 +95,14 @@ const Registration = () => {
                     )}
                 />
             </Form.Item>
+            <TitleLink>
+                <span>
+                    Есть,
+                </span>
+                <Link to={'/registration'}>
+                    аккаунт
+                </Link>
+            </TitleLink>
             <Button block htmlType='submit' type='primary'>Зарегистрироватся</Button>
         </FormWrapper>
     )
