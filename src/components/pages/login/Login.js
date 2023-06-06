@@ -32,8 +32,9 @@ const Login = () => {
         const res = await FetchAuth(data);
         if (res.access) {
             login(res.access)
-            router('/')
-            message.success('Добро пожаловать!!!')
+            localStorage.setItem('login', data.username);
+            router('/');
+            message.success('Добро пожаловать!!!');
         }
         else if (res.detail) {
             message.error(res.detail)

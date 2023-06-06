@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,6 +10,7 @@ import Login from './components/pages/login/Login';
 import Registration from './components/pages/registration/Registration';
 import MainPage from './components/pages/main-page/MainPage';
 import { AuthProvider } from './context/AuthContext';
+import Profile from './components/pages/profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/registration',
         element: <Registration />
+      },
+      {
+        path: '/profile',
+        element: <Profile />
       },
     ]
   },
